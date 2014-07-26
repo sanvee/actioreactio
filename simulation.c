@@ -71,11 +71,11 @@ int main (int argc, char **argv)
   T = gsl_rng_mt19937; // default generator
   rand = gsl_rng_alloc(T);
 
-   fpb = fopen("../data/stoß.bin","wb");
-   fpc = fopen("../data/labor.bin","wb");
-   fpg = fopen("../data/finaltem.bin","wb");
+   fpb = fopen("data/stoß.bin","wb");
+   fpc = fopen("data/labor.bin","wb");
+   fpg = fopen("data/finaltem.bin","wb");
 
-   sprintf(filename,"../data/statenerg%i.bin",(int)(delta*101));
+   sprintf(filename,"data/statenerg%i.bin",(int)(delta*101));
    fpe = fopen(filename,"wb");
    int counter =0;
    int max =30;
@@ -83,11 +83,11 @@ int main (int argc, char **argv)
      {
       if (fl ==1 || counter ==0 )
 	    {
-	       fpd = fopen("../data/energie.bin","wb");
+	       fpd = fopen("data/energie.bin","wb");
 	    }
       if ( counter == max)
 	    {
-	      fpf = fopen("../data/energie_stat.bin","wb");
+	      fpf = fopen("data/energie_stat.bin","wb");
 	    }
        printf("%i\n",counter);
       
